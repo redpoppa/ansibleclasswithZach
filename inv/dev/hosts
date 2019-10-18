@@ -1,0 +1,5 @@
+[planetexpress]
+bender ansible_host=10.10.2.3 ansible_user=bender
+fry ansible_host=10.10.2.4 ansible_use=fry
+zoidberg ansible_host=10.10.2.5 ansible_user=zoidberg
+farnsworth ansible_host=10.10.2.6 ansible_user=farnsworth

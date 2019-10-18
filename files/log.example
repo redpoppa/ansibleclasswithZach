@@ -1,0 +1,5 @@
+ERROR 19.168.0.1 VM is stuck in  ERROR mode
+WARNING memeory is raching 70%
+ERROR 10.0.0.1 unexpectedly shutdown
+ERROR 172.16.18.1 no responding to keep-alive messages
+WARNING end of log

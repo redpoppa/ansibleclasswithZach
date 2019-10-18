@@ -1,0 +1,13 @@
+---
+- name: learning to template
+  gather_facts: yes
+  hosts: planetexpress
+
+  tasks:
+          - name: fill in the ship.cfg.j2 and push to hosts
+            template:
+                    src:
+
+
+
+

@@ -1,0 +1,24 @@
+---
+- name: More looping
+  hosts: localhost
+  gather_facts: yes
+
+  vars_files:
+          - ~/ans/vars/yummysnacks.yml
+  
+  tasks:
+          - name: show off loop control
+            debug:
+                    var: item
+            loop:
+                    - server1
+                    - server2
+                    - server3
+            loop_control:
+                    pause: 3 
+
+          - name: loop across complex data
+            debug:
+                    var: item
+            loop: "{{ snacks }}"
+            

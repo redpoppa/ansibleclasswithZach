@@ -1,0 +1,34 @@
+---
+- name: find a files and fetch them back to controller
+  gather_facts: yes
+  hosts: planetexpress
+  
+
+  vars: 
+            path: "*.pcap, *pcapng,"
+            pathy: "~/"
+
+  tasks:
+          # find a file
+          # register the results (save the results that come back)
+          - name: Find / files ending with .pcap or .pcapng
+            find:
+                paths: "{{ pathy }}"
+                patterns: "{{ patt }}"
+                # size: 10m
+                recurse: yes
+          
+            register: results
+            
+          - name: what the heck is in results
+            debug: 
+                        var: results.file
+                        verbosity: 1
+
+
+
+          # create a directory to store our results in
+          - name: 
+          #
+          # parse the results that come back (loop)
+          # pull them back to the contoller (fetch module)

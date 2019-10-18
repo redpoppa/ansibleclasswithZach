@@ -1,0 +1,14 @@
+---
+- name: Use ansible to install python
+  ## turn off gather facts or setup.py
+  gather_facts: no
+  hosts: raiders
+
+  tasks:
+          - name: using raw module to update
+            raw: apt update -y
+            become: yes
+
+          - name: using raw module to install python
+            raw: apt install python3-pip -y
+            become: yes
